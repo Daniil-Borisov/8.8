@@ -30,7 +30,7 @@ const updateFruit = (getFruit, fruitInCart, quantity) => {
   if (fruitInCart) {
 
 
-    if((fruitInCart.count + quantity) % 3 === 0) {
+    if(((fruitInCart.count + quantity) % 3 === 0) && getFruit.id === 2) {
       price = quantity * getFruit.price / 2;
     } else {
       price = quantity * getFruit.price;
@@ -59,7 +59,7 @@ const removeFruit=(getFruit, fruitInCart, quantity) => {
   if (fruitInCart) {
 
 
-    if ((fruitInCart.count) % 3 === 0) {
+    if ((fruitInCart.count % 3 === 0) && getFruit.id === 2) {
       price = quantity * getFruit.price / 2;
     } else {
       price = quantity * getFruit.price;
